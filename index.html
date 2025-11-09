@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>מסע בחלל</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <h1 id="score">Score: 0</h1>
+
+  <img src="player1.png" id="player" />
+
+  <img src="earth.png"    id="enemy1" class="enemy" />
+  <img src="hama.png"  id="enemy2" class="enemy" />
+  <img src="venus.png"   id="enemy3" class="enemy" />
+  <img src="mars.png"  id="enemy4" class="enemy" />
+  <img src="jupiter.png" id="enemy5" class="enemy" />
+  <img src="uranus.png"  id="enemy6" class="enemy" />
+  <img src="saturn.png" id="enemy7" class="enemy" />
+  <img src="neptune.png"  id="enemy8" class="enemy" />
+  
+  <div id="game-over-screen" style="display: none;">
+    <div id="game-over-content">
+      <h1>💀 game over💀</h1>
+      <p id="final-score"></p>
+      <button onclick="restartGame()">restart game</button>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
