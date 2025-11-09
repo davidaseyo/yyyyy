@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 90vh;
+}
+
+#score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: rgb(124, 7, 179);
+  font-size: 32px;
+  z-index: 2;
+}
+
+#player {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  bottom: 25px;
+  left: 110px;
+  z-index: 2;
+}
+
+.enemy {
+  width: 200px;
+  height: 190px;
+  position: absolute;
+  bottom: 300px;
+  z-index: 2;
+}
+
+.jump {
+  animation-name: jump;
+  animation-duration: 0.9s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes jump {
+  0%   { bottom: 25px; }
+  50%  { bottom: 480px; }
+  100% { bottom: 25px; }
+}
+
+#game-over-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+#game-over-content {
+  text-align: center;
+  font-size: 60px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#game-over-screen button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 40px;
+  background-color: #bd12cc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
